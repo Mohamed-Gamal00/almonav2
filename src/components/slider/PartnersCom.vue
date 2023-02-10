@@ -13,6 +13,9 @@
       }"
       :spaceBetween="30"
       :slidesPerGroup="1"
+      :pagination="{
+        clickable: true,
+      }"
       :loop="true"
       :loopFillGroupWithBlank="true"
       :navigation="true"

@@ -115,7 +115,7 @@
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                     Designed By &copy;
                     <a class="border-bottom text-decoration-none" href=""
-                      >GEMY</a
+                      >ALMONA</a
                     >
                   </div>
                 </div>

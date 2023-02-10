@@ -782,26 +782,14 @@ export default {
         );
         if (result.status == 200) {
           this.errorMessage = "";
-          // this.successMessage = "success fill";
-          // this.$swal.fire({
-          //   icon: "success",
-          //   title: "جرع",
-          //   html: "<p style='text-align: center;color:green'> تم التسجيل بنجاح</p><br/><video src='https://backend.sigma-tech.agency/dash/%D9%85%D8%AF%D8%AD%D8%AA%20%D8%B4%D9%84%D8%A8%D9%8A%20_%20%D8%A8%D8%B1%D8%A7%D9%81%D9%88%20%D8%B9%D9%84%D9%8A%D9%83.mp4' autoplay style='width: 400px; height: 350px'></video>  ",
-          //   timer: 5000,
-          // });
+
           this.$swal.fire({
             icon: "success",
-            title: "جرع",
-            html: "<p style='text-align: center;color:green'> تم التسجيل بنجاح</p><br/><video src='https://backend.sigma-tech.agency/dash/%D9%85%D8%AF%D8%AD%D8%AA%20%D8%B4%D9%84%D8%A8%D9%8A%20_%20%D8%A8%D8%B1%D8%A7%D9%81%D9%88%20%D8%B9%D9%84%D9%8A%D9%83.mp4' autoplay style='width: 400px; height: 350px'></video>  ",
-            timer: 5000,
+            title: "تم...",
+            text: "عملية تسجيل ناجحة",
+            footer: "<p>تم تسجيل ردك بنجاح</p>",
+            timer: 2000,
           });
-          // this.$swal.fire({
-          //   icon: "success",
-          //   title: "تم...",
-          //   text: "عملية تسجيل ناجحة",
-          //   footer: "<p>تم تسجيل ردك بنجاح</p>",
-          //   timer: 2000,
-          // });
           setTimeout(() => {
             this.successMessage = "";
             this.errorMessage = "";
@@ -823,18 +811,12 @@ export default {
       } else {
         this.successMessage = "";
         // this.errorMessage = "fill faled";
-        // this.$swal.fire({
-        //   icon: "error",
-        //   title: "Oops...",
-        //   text: "عملية تسجيل خاطئة",
-        //   footer: "<p>املئ البيانات بطريقة صحيحة</p>",
-        //   timer: 2000,
-        // });
         this.$swal.fire({
           icon: "error",
           title: "Oops...",
-          html: "<p style='text-align: center;color:red'>عملية تسجيل خاطئة</p><br/></video></video><video src='https://backend.sigma-tech.agency/dash/videoplaybackccccccccc.mp4' autoplay style='width: 400px; height: 350px'></video>  ",
-          timer: 5000,
+          text: "عملية تسجيل خاطئة",
+          footer: "<p>املئ البيانات بطريقة صحيحة</p>",
+          timer: 2000,
         });
       }
       this.loading = false;
