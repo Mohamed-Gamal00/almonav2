@@ -1,14 +1,14 @@
 <template>
   <div class="about">
-    <AboutCom />
+    <AppsCom />
   </div>
 </template>
 <script>
-import AboutCom from "@/components/about_us/AboutCom.vue";
+import AppsCom from "@/components/ourworks/AppsCom.vue";
 export default {
-  name: "AboutView",
+  name: "AppsView",
   components: {
-    AboutCom,
+    AppsCom,
   },
 };
 </script>
