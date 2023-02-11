@@ -84,14 +84,14 @@ export default {
   async mounted() {
     this.loading = true;
     let result = await axios
-      .get(`https://backend.sigma-tech.agency/api/article/${this.id}`)
+      .get(`https://admin.sigma-tech.agency/api/article/${this.id}`)
       .catch(() => this.$router.push({ name: "servererror" }));
     if (result.status == 200) {
       this.article = result.data.article;
     }
     /* articles */
     let articles = await axios.get(
-      `https://backend.sigma-tech.agency/api/articles`
+      `https://admin.sigma-tech.agency/api/articles`
     );
     // .catch(() => this.$router.push({ name: "servererror" }));
     if (result.status == 200) {

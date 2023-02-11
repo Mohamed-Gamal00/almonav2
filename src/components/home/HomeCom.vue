@@ -320,7 +320,7 @@
                         <h3 class="content-title">{{ app.title }}</h3>
                         <p class="content-text">click to show more details</p>
                         <router-link
-                          class="text-decoration-none fw-bold"
+                          class="text-decoration-none text-white fw-bold"
                           :to="{ name: 'app', params: { id: app.id } }"
                           >عرض المزيد</router-link
                         >
@@ -406,6 +406,7 @@
                     <p class="card-text fw-bold">{{ article.date }}</p>
                     <!-- <a href="#" class="btn btn-link fw-bold m-0 p-0">عرض المزيد</a> -->
                     <router-link
+                      class="text-dark fw-bold"
                       :to="{ name: 'article', params: { id: article.id } }"
                       >عرض المزيد</router-link
                     >
@@ -446,7 +447,7 @@
   </div>
 
   <!-- تواصل معنا -->
-  <div class="container-fluid mt-5" style="background-color: #f8faff">
+  <div class="container-fluid mt-5" style="background-color: #ffffff">
     <!-- text -->
     <div class="container">
       <div class="row d-flex justify-content-center">
@@ -491,7 +492,7 @@
                           class="col-md-10 col-lg-6 col-xl-6 order-2 order-lg-1"
                         >
                           <form class="mx-1 mx-md-4" style="direction: rtl">
-                            <div class="row">
+                            <div class="row mt-4">
                               <div class="col-md-6">
                                 <!--  الاسم -->
                                 <div
@@ -731,7 +732,7 @@ export default {
     this.loading = true;
     /* counter */
     let result = await axios
-      .get(`https://backend.sigma-tech.agency/api/info`)
+      .get(`https://admin.sigma-tech.agency/api/info`)
       .catch(() => this.$router.push({ path: "/servererror" }));
 
     if (result.status == 200) {
@@ -741,21 +742,21 @@ export default {
       }
       /* servcies */
       let services = await axios.get(
-        `https://backend.sigma-tech.agency/api/services`
+        `https://admin.sigma-tech.agency/api/services`
       );
       // .catch(() => this.$router.push({ name: "servererror" }));
       if (services.status == 200) {
         this.services = services.data.services;
       }
       /* apps */
-      let apps = await axios.get(`https://backend.sigma-tech.agency/api/apps`);
+      let apps = await axios.get(`https://admin.sigma-tech.agency/api/apps`);
       // .catch(() => this.$router.push({ name: "servererror" }));
       if (result.status == 200) {
         this.apps = apps.data.apps.splice(0, 3);
       }
       /* articles */
       let articles = await axios.get(
-        `https://backend.sigma-tech.agency/api/articles`
+        `https://admin.sigma-tech.agency/api/articles`
       );
       // .catch(() => this.$router.push({ name: "servererror" }));
       if (result.status == 200) {
@@ -771,11 +772,11 @@ export default {
       this.v$.$validate();
       if (!this.v$.$error) {
         // let result = await axios.post(
-        //   `https://backend.sigma-tech.agency/api/contact`,
+        //   `https://admin.sigma-tech.agency/api/contact`,
         //   this.contact
         // );
         let result = await axios.post(
-          `https://backend.sigma-tech.agency/api/contact`,
+          `https://admin.sigma-tech.agency/api/contact`,
           this.contact
         );
         if (result.status == 200) {

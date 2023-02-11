@@ -87,7 +87,7 @@
 
                   <p
                     class="text-end fw-bold ms-3"
-                    style="position: relative; top: 5px; color: #0e111"
+                    style="position: relative; top: 5px; color: #000000"
                   >
                     $ {{ item.price }}
                   </p>
@@ -142,7 +142,7 @@ export default {
   async mounted() {
     this.loading = true;
     let result = await axios
-      .get(`https://backend.sigma-tech.agency/api/products`)
+      .get(`https://admin.sigma-tech.agency/api/products`)
       .catch(() => this.$router.push({ path: "/servererror" }));
     if (result.status == 200) {
       this.cats = result.data.cats;
@@ -257,14 +257,12 @@ export default {
   width: 50%;
   height: 40px;
   border: 1px solid #0e1116;
-  background-color: #0e1116;
-  border: 1px solid #008ab8;
-  background-color: #008ab8;
+  background-color: #000000;
   color: #ffffff;
   transition: all 0.3s ease-in-out;
 }
 .services button:hover {
-  color: #008ab8;
+  color: #000000 !important;
   background-color: #ffffff;
   font-weight: 700 !important;
 }

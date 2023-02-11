@@ -46,7 +46,7 @@
               class="rounded-circle"
             />
           </div>
-          <h3 class="title">{{ partner.name }}</h3>
+          <h3 class="title text-dark">{{ partner.name }}</h3>
         </div>
       </swiper-slide>
     </swiper>
@@ -68,7 +68,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
-import { Pagination, Navigation } from "swiper";
+import { Navigation } from "swiper";
 
 export default {
   name: "PrtnersCom",
@@ -83,12 +83,12 @@ export default {
   },
   setup() {
     return {
-      modules: [Pagination, Navigation],
+      modules: [Navigation],
     };
   },
   async mounted() {
     let result = await axios
-      .get(`https://backend.sigma-tech.agency/api/partners`)
+      .get(`https://admin.sigma-tech.agency/api/partners`)
       .catch(() => this.$router.push({ path: "/servererror" }));
     if (result.status == 200) {
       this.partners = result.data.partners;
@@ -98,6 +98,10 @@ export default {
 </script>
 
 <style>
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  color: #333333;
+}
 .partners .swiper {
   width: 100%;
   height: 100%;

@@ -1,7 +1,7 @@
 <template>
   <div
     class="container-fluid mt-5"
-    style="background-color: #101010; direction: rtl"
+    style="background-color: #323232; direction: rtl"
   >
     <div class="row d-flex justify-content-center">
       <div class="col-md-9">
@@ -26,14 +26,29 @@
                       ويُستخدم في صناعات المطابع ودور النشر.
                     </p>
                     <div class="d-flex justify-content-center pt-2">
-                      <a class="btnn btn-outline-light btn-social" href=""
-                        ><FontAwesome :icon="['fab', 'facebook']"
+                      <a
+                        class="btnn btn-outline-light btn-social"
+                        target="_blank"
+                        href="https://api.whatsapp.com/send/?phone=966565553390&text&app_absent=0"
+                        ><FontAwesome :icon="['fab', 'whatsapp']"
                       /></a>
-                      <a class="btnn btn-outline-light btn-social" href=""
-                        ><FontAwesome :icon="['fab', 'twitter']"
+                      <a
+                        class="btnn btn-outline-light btn-social"
+                        target="_blank"
+                        href="https://www.youtube.com/channel/UCfDjRK3Yjf21dRGdMtBQCzg"
+                        ><FontAwesome :icon="['fab', 'youtube']"
                       /></a>
-                      <a class="btnn btn-outline-light btn-social" href=""
+                      <a
+                        class="btnn btn-outline-light btn-social"
+                        target="_blank"
+                        href="https://www.instagram.com/AlmonaOffice/"
                         ><FontAwesome :icon="['fab', 'instagram']"
+                      /></a>
+                      <a
+                        class="btnn btn-outline-light btn-social"
+                        target="_blank"
+                        href="https://www.tiktok.com/@almonaoffice.sa"
+                        ><FontAwesome :icon="['fab', 'tiktok']"
                       /></a>
                     </div>
                   </div>
@@ -110,13 +125,9 @@
               <div class="container">
                 <div class="row">
                   <div class="col-md-12 text-center mb-3 mb-md-0">
-                    All Right Reserved.
+                    2023 .جميع الحقوق محفوطة&copy; لمؤسسة المنى
 
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By &copy;
-                    <a class="border-bottom text-decoration-none" href=""
-                      >ALMONA</a
-                    >
                   </div>
                 </div>
               </div>
@@ -137,8 +148,8 @@ export default {
 
 <style>
 :root {
-  --primary: #2380be;
-  --light: #05121b;
+  --primary: #ffcc66;
+  --light: #ffffff;
   --dark: #0e2e50;
 }
 .btnn.btn-social {
@@ -149,7 +160,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f3f6f8;
+  background-color: #333333;
   color: var(--light);
   border: 1px solid rgba(256, 256, 256, 0.1);
   transition: 0.3s;
@@ -172,7 +183,7 @@ export default {
 .btn_btn_link:hover {
   letter-spacing: 0.5px;
   box-shadow: none;
-  color: #0099ff;
+  color: #ffcc66;
 }
 
 .btn_btn_link::before {

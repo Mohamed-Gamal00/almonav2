@@ -53,6 +53,7 @@
                   <p class="card-text fw-bold">{{ article.date }}</p>
                   <!-- <router-link to="article/{{ article.id }}">المزيد</router-link> -->
                   <router-link
+                    class="text-dark fw-bold"
                     :to="{ name: 'article', params: { id: article.id } }"
                     >عرض المزيد</router-link
                   >
@@ -125,9 +126,9 @@ export default {
   methods: {
     async fetcharticles(page_url) {
       this.loading = true;
-      page_url = page_url || `https://backend.sigma-tech.agency/api/articles`;
+      page_url = page_url || `https://admin.sigma-tech.agency/api/articles`;
 
-      page_url = page_url || `https://backend.sigma-tech.agency/api/articles`;
+      page_url = page_url || `https://admin.sigma-tech.agency/api/articles`;
       this.loading = true;
 
       let result = await axios
@@ -150,6 +151,15 @@ export default {
 };
 </script>
 <style>
+.active > .page-link,
+.page-link.active {
+  color: #ffcc66 !important;
+  background-color: #333333 !important;
+  border: none !important;
+}
+.page-link {
+  color: #333333 !important;
+}
 .articles {
   direction: rtl;
   color: #323232;
@@ -161,8 +171,7 @@ export default {
 }
 .articles .articles_card:hover {
   border: 0px;
-  box-shadow: 0 3px 6px rgba(0, 138, 184, 0.342),
-    0 3px 6px rgba(0, 138, 184, 0.301);
+  box-shadow: 0 3px 6px rgba(0, 1, 2, 0.123), 0 3px 6px rgba(22, 23, 24, 0.11);
   transform: scale(1);
 }
 .articles .containerr {

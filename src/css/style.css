@@ -208,3 +208,6 @@ h1.backgroundcenter::before {
   /* background-color: #008ab8; */
   text-align: center ;
 }
+.rowSer:hover {
+  border-radius: 10px !important;
+}

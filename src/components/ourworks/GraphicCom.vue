@@ -130,7 +130,7 @@ export default {
     this.loading = true;
 
     let result = await axios.get(
-      `https://backend.sigma-tech.agency/api/graphics`
+      `https://admin.sigma-tech.agency/api/graphics`
     );
     if (result.status == 200) {
       this.cats = result.data.cats;

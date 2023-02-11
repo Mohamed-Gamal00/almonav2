@@ -349,7 +349,7 @@ export default {
   async mounted() {
     this.loading = true;
     let result = await axios.get(
-      `https://backend.sigma-tech.agency/api/app/${this.id}`
+      `https://admin.sigma-tech.agency/api/app/${this.id}`
     );
     if (result.status == 200) {
       this.app = result.data.app;
@@ -382,7 +382,8 @@ export default {
   border-radius: 8px;
 }
 .market-btn:hover {
-  background-color: #008ab8;
+  background-color: #323232;
+  color: white;
   text-decoration: none;
 }
 .market-btn .market-button-title {

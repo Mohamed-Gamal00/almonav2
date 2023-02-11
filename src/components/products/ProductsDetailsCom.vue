@@ -34,8 +34,8 @@
                 >
                   <button
                     type="button"
-                    class="btn"
-                    style="background-color: #008ab8; width: 50%"
+                    class="btn text-white"
+                    style="background-color: #323232; width: 50%"
                   >
                     <!-- اطلب الان -->
                     اطلب الان
@@ -109,7 +109,7 @@ export default {
   async mounted() {
     this.loading = true;
     let result = await axios
-      .get(`https://backend.sigma-tech.agency/api/product/${this.id}`)
+      .get(`https://admin.sigma-tech.agency/api/product/${this.id}`)
       .catch(() => this.$router.push({ path: "/servererror" }));
     if (result.status == 200) {
       this.product = result.data.product;

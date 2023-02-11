@@ -138,9 +138,7 @@ export default {
   async mounted() {
     this.loading = true;
 
-    let result = await axios.get(
-      `https://backend.sigma-tech.agency/api/motions`
-    );
+    let result = await axios.get(`https://admin.sigma-tech.agency/api/motions`);
     if (result.status == 200) {
       this.cats = result.data.cats;
       this.products = result.data.motions;

@@ -1,9 +1,10 @@
 <template>
+  <!-- <div class="page-loader" v-if="!isloaded"> -->
   <div class="page-loader">
     <div class="loading-container">
       <div class="loading"></div>
       <div id="loading-text">loading</div>
-      <div id="loading-sigma">SIGMA</div>
+      <div id="loading-almona">AL-MONA</div>
     </div>
     <br />
   </div>
@@ -26,8 +27,7 @@ export default {
   // },
 };
 </script>
-
-<style scoped>
+<style>
 /** BEGIN CSS **/
 .page-loader {
   display: flex;
@@ -55,7 +55,7 @@ export default {
 
 .loading {
   border: 2px solid transparent;
-  border-color: transparent #248de4 transparent #248de4;
+  border-color: transparent #ffcc66 transparent #ffcc66;
   -moz-animation: rotate-loading 1.5s linear 0s infinite normal;
   -moz-transform-origin: 50% 50%;
   -o-animation: rotate-loading 1.5s linear 0s infinite normal;
@@ -67,7 +67,7 @@ export default {
 }
 
 .loading-container:hover .loading {
-  border-color: transparent #e45635 transparent #e45635;
+  border-color: transparent #000000 transparent #000000;
 }
 .loading-container:hover .loading,
 .loading-container .loading {
@@ -78,12 +78,12 @@ export default {
   transition: all 0.5s ease-in-out;
 }
 
-#loading-sigma {
+#loading-almona {
   /* -moz-animation: loading-text-opacity 2s linear 0s infinite normal;
   -o-animation: loading-text-opacity 2s linear 0s infinite normal;
   -webkit-animation: loading-text-opacity 2s linear 0s infinite normal; */
   /* animation: loading-text-opacity 2s linear 0s infinite normal; */
-  color: #008ab8;
+  color: #000000;
   font-family: "Helvetica Neue, " Helvetica ", " "arial";
   font-size: 10px;
   font-weight: bold;
@@ -100,11 +100,11 @@ export default {
   -o-animation: loading-text-opacity 2s linear 0s infinite normal;
   -webkit-animation: loading-text-opacity 2s linear 0s infinite normal;
   animation: loading-text-opacity 2s linear 0s infinite normal;
-  color: #008ab8;
+  color: #000000;
   font-family: "Helvetica Neue, " Helvetica ", " "arial";
   font-size: 10px;
   font-weight: bold;
-  margin-top: 35px;
+  margin-top: 30px;
   opacity: 0;
   position: absolute;
   text-align: center;
