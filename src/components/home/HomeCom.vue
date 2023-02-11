@@ -736,10 +736,8 @@ export default {
 
     if (result.status == 200) {
       this.counters = result.data.info;
-      console.log(result);
       if (result.status == 200) {
         this.counters = result.data.info;
-        console.log("true");
       }
       /* servcies */
       let services = await axios.get(
