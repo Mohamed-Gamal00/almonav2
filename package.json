@@ -23,10 +23,10 @@
     "normalize.css": "^8.0.1",
     "popper.js": "^1.16.1",
     "swiper": "^9.0.4",
-    "v-viewer": "^1.6.4",
-    "v-viewer-vue3": "^1.0.0",
+    "v-viewer": "^3.0.11",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
+    "vue-snip": "^2.0.0",
     "vue-sweetalert2": "^5.0.5",
     "vue3-autocounter": "^1.0.6",
     "vuex": "^4.0.0"

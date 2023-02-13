@@ -241,7 +241,7 @@
     <PrtnersCom />
   </div>
   <!-- تواصل معنا -->
-  <div class="container-fluid mt-5 font_p" style="background-color: #f8faff">
+  <div class="container-fluid mt-5 font_p" style="background-color: #ffffff">
     <!-- text -->
     <div class="row d-flex justify-content-center" style="direction: rtl">
       <div class="col-md-10 col-lg-9">
@@ -273,7 +273,7 @@
                   <div class="card text-black border-0">
                     <div
                       class="card-body p-0"
-                      style="direction: ltr; background-color: #f8faff"
+                      style="direction: ltr; background-color: #ffffff"
                     >
                       <div class="row justify-content-center">
                         <div

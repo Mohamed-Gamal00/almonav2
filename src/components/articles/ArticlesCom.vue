@@ -68,7 +68,10 @@
       <!-- pagination -->
       <div class="container mt-5">
         <div class="row mt-3 d-flex justify-content-center">
-          <div class="col-md-10 d-flex justify-content-center">
+          <div
+            class="col-md-10 d-flex justify-content-center"
+            style="cursor: default"
+          >
             <nav aria-label="Page navigation example">
               <ul class="pagination p-0">
                 <li

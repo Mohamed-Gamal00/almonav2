@@ -15,16 +15,17 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import VueSweetalert2 from "vue-sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
-// import VueSnip from "vue-snip";
+import VueSnip from "vue-snip";
 /* lightbox */
 import "viewerjs/dist/viewer.css";
-// import VueViewer from "v-viewer";
+import VueViewer from "v-viewer";
 library.add(fas, far, fab);
 createApp(App)
   .use(store)
   // .use(VueViewer)
+  .use(VueViewer)
   .use(VueSweetalert2)
-  // .use(VueSnip)
+  .use(VueSnip)
   .component("FontAwesome", FontAwesomeIcon)
   .use(router)
   .mount("#app");
