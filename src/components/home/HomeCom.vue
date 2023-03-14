@@ -74,7 +74,6 @@
                 separator=","
                 decimalSeparator="."
                 :autoinit="true"
-                @finished="alert(`Counting finished!`)"
               />
               <!-- <span class="counter">{{ counters.customers }}</span> -->
               <p class="fs-6 fw-bold">عملاء</p>
@@ -89,7 +88,6 @@
                 separator=","
                 decimalSeparator="."
                 :autoinit="true"
-                @finished="alert(`Counting finished!`)"
               />
               <!-- <span class="counter">{{ counters.employees }}</span> -->
               <p class="fs-6 fw-bold">موظفين</p>
@@ -104,7 +102,6 @@
                 separator=","
                 decimalSeparator="."
                 :autoinit="true"
-                @finished="alert(`Counting finished!`)"
               />
               <!-- <span class="counter">{{ counters.projects }}</span> -->
               <p class="fs-6 fw-bold">مشاريع منتهية</p>
@@ -152,7 +149,11 @@
             >
               <div class="col-md-5 align-content-center mb-md-">
                 <div class="text-center">
-                  <img class="img-fluid" src="@/assets/almonagold.png" alt="" />
+                  <img
+                    class="img-fluid"
+                    src="@/assets/almonablack.png"
+                    alt=""
+                  />
                 </div>
               </div>
               <div class="col-md-5 ps-md-0" style="box-sizing: content-box">
@@ -221,7 +222,9 @@
                     :icon="service.icon"
                     class="fs-2 fw-bold p-3 mt-lg-3"
                   />
-                  <h2 class="mt-lg-3">{{ service.name }}</h2>
+                  <h2 class="mt-lg-3" style="font-size: 20px">
+                    {{ service.name }}
+                  </h2>
                   <p v-snip="3">{{ service.desc }}</p>
                   <!-- <p class="mt-lg-3">
                     {{ service.desc }}

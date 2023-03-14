@@ -10,7 +10,7 @@
           <img src="@/assets/almona.png" width="50" alt="" />
         </router-link>
         <span
-          style="background-color: #008ab8; color: white"
+          style="background-color: #ffcc66; color: white"
           class="navbar-toggler p-2"
           type="button"
           data-bs-toggle="collapse"
