@@ -735,7 +735,7 @@ export default {
     this.loading = true;
     /* counter */
     let result = await axios
-      .get(`https://admin.sigma-tech.agency/api/info`)
+      .get(` https://admin.almonaoffice.sa/api/info`)
       .catch(() => this.$router.push({ path: "/servererror" }));
 
     if (result.status == 200) {
@@ -745,21 +745,21 @@ export default {
       }
       /* servcies */
       let services = await axios.get(
-        `https://admin.sigma-tech.agency/api/services`
+        ` https://admin.almonaoffice.sa/api/services`
       );
       // .catch(() => this.$router.push({ name: "servererror" }));
       if (services.status == 200) {
         this.services = services.data.services;
       }
       /* apps */
-      let apps = await axios.get(`https://admin.sigma-tech.agency/api/apps`);
+      let apps = await axios.get(` https://admin.almonaoffice.sa/api/apps`);
       // .catch(() => this.$router.push({ name: "servererror" }));
       if (result.status == 200) {
         this.apps = apps.data.apps.splice(0, 3);
       }
       /* articles */
       let articles = await axios.get(
-        `https://admin.sigma-tech.agency/api/articles`
+        ` https://admin.almonaoffice.sa/api/articles`
       );
       // .catch(() => this.$router.push({ name: "servererror" }));
       if (result.status == 200) {
@@ -775,11 +775,11 @@ export default {
       this.v$.$validate();
       if (!this.v$.$error) {
         // let result = await axios.post(
-        //   `https://admin.sigma-tech.agency/api/contact`,
+        //   ` https://admin.almonaoffice.sa//api/contact`,
         //   this.contact
         // );
         let result = await axios.post(
-          `https://admin.sigma-tech.agency/api/contact`,
+          ` https://admin.almonaoffice.sa/api/contact`,
           this.contact
         );
         if (result.status == 200) {

@@ -261,7 +261,7 @@ export default {
     async getcat() {
       this.loading = true;
       let category = await axios.get(
-        `https://admin.sigma-tech.agency/api/products`
+        ` https://admin.almonaoffice.sa/api/products`
       );
       // .catch(this.$router.push({ path: "servererror" }));
 
@@ -275,7 +275,7 @@ export default {
       this.v$.$validate();
       if (!this.v$.$error) {
         let result = await axios.post(
-          `https://admin.sigma-tech.agency/api/order`,
+          ` https://admin.almonaoffice.sa/api/order`,
           this.contact
         );
         if (result.status == 200) {

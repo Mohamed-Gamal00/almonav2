@@ -78,7 +78,7 @@ export default {
     };
   },
   async mounted() {
-    let result = await axios.get(`https://admin.sigma-tech.agency/api/team`);
+    let result = await axios.get(` https://admin.almonaoffice.sa/api/team`);
     if (result.status == 200) {
       this.members = result.data.team;
     }

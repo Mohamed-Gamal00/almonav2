@@ -109,7 +109,7 @@ export default {
   async mounted() {
     this.loading = true;
     let result = await axios
-      .get(`https://admin.sigma-tech.agency/api/product/${this.id}`)
+      .get(` https://admin.almonaoffice.sa/api/product/${this.id}`)
       .catch(() => this.$router.push({ path: "/servererror" }));
     if (result.status == 200) {
       this.product = result.data.product;

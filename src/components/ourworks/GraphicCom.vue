@@ -129,9 +129,7 @@ export default {
   async mounted() {
     this.loading = true;
 
-    let result = await axios.get(
-      `https://admin.sigma-tech.agency/api/graphics`
-    );
+    let result = await axios.get(` https://admin.almonaoffice.sa/api/graphics`);
     if (result.status == 200) {
       this.cats = result.data.cats;
       this.products = result.data.graphics;

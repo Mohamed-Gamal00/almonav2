@@ -520,7 +520,7 @@ export default {
   async mounted() {
     this.loading = true;
     let result = await axios
-      .get(`https://admin.sigma-tech.agency/api/info`)
+      .get(` https://admin.almonaoffice.sa/api/info`)
       .catch(() => this.$router.push({ path: "/servererror" }));
     if (result.status == 200) {
       this.counters = result.data.info;
@@ -534,7 +534,7 @@ export default {
       this.v$.$validate();
       if (!this.v$.$error) {
         let result = await axios.post(
-          `https://admin.sigma-tech.agency/api/contact`,
+          ` https://admin.almonaoffice.sa/api/contact`,
           this.contact
         );
         if (result.status == 200) {

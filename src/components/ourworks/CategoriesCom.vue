@@ -100,7 +100,7 @@ export default {
   },
   async mounted() {
     this.loading = true;
-    let result = await axios.get(`https://admin.sigma-tech.agency/api/apps`);
+    let result = await axios.get(` https://admin.almonaoffice.sa/api/apps`);
     if (result.status == 200) {
       this.apps = result.data.apps;
     }
