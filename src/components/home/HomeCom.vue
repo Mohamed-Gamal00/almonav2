@@ -735,7 +735,7 @@ export default {
     this.loading = true;
     /* counter */
     let result = await axios
-      .get(` https://admin.almonaoffice.sa/api/info`)
+      .get(`https://admin.almonaoffice.sa.almona.host/api/info`)
       .catch(() => this.$router.push({ path: "/servererror" }));
 
     if (result.status == 200) {
@@ -745,25 +745,31 @@ export default {
       }
       /* servcies */
       let services = await axios.get(
-        ` https://admin.almonaoffice.sa/api/services`
+        `https://admin.almonaoffice.sa.almona.host/api/services`
       );
       // .catch(() => this.$router.push({ name: "servererror" }));
       if (services.status == 200) {
         this.services = services.data.services;
       }
       /* apps */
-      let apps = await axios.get(` https://admin.almonaoffice.sa/api/apps`);
+      let apps = await axios.get(
+        `https://admin.almonaoffice.sa.almona.host/api/apps`
+      );
       // .catch(() => this.$router.push({ name: "servererror" }));
-      if (result.status == 200) {
+      if (apps.status == 200 && apps.data.success == true) {
         this.apps = apps.data.apps.splice(0, 3);
+      } else {
+        this.apps = apps.data.apps;
       }
       /* articles */
       let articles = await axios.get(
-        ` https://admin.almonaoffice.sa/api/articles`
+        `https://admin.almonaoffice.sa.almona.host/api/articles`
       );
       // .catch(() => this.$router.push({ name: "servererror" }));
-      if (result.status == 200) {
+      if (articles.status == 200 && articles.data.success == true) {
         this.articles = articles.data.data.splice(0, 3);
+      } else {
+        this.articles = articles.data.data;
       }
       this.loading = false;
     }
@@ -775,11 +781,11 @@ export default {
       this.v$.$validate();
       if (!this.v$.$error) {
         // let result = await axios.post(
-        //   ` https://admin.almonaoffice.sa//api/contact`,
+        //   `https://admin.almonaoffice.sa.almona.host//api/contact`,
         //   this.contact
         // );
         let result = await axios.post(
-          ` https://admin.almonaoffice.sa/api/contact`,
+          `https://admin.almonaoffice.sa.almona.host/api/contact`,
           this.contact
         );
         if (result.status == 200) {

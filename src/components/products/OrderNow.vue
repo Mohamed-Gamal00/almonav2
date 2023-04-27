@@ -261,7 +261,7 @@ export default {
     async getcat() {
       this.loading = true;
       let category = await axios.get(
-        ` https://admin.almonaoffice.sa/api/products`
+        `https://admin.almonaoffice.sa.almona.host/api/products`
       );
       // .catch(this.$router.push({ path: "servererror" }));
 
@@ -275,7 +275,7 @@ export default {
       this.v$.$validate();
       if (!this.v$.$error) {
         let result = await axios.post(
-          ` https://admin.almonaoffice.sa/api/order`,
+          `https://admin.almonaoffice.sa.almona.host/api/order`,
           this.contact
         );
         if (result.status == 200) {

@@ -142,7 +142,7 @@ export default {
   async mounted() {
     this.loading = true;
     let result = await axios
-      .get(` https://admin.almonaoffice.sa/api/products`)
+      .get(`https://admin.almonaoffice.sa.almona.host/api/products`)
       .catch(() => this.$router.push({ path: "/servererror" }));
     if (result.status == 200) {
       this.cats = result.data.cats;

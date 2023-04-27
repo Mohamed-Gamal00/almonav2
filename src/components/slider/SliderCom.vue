@@ -78,7 +78,9 @@ export default {
     };
   },
   async mounted() {
-    let result = await axios.get(` https://admin.almonaoffice.sa/api/team`);
+    let result = await axios.get(
+      `https://admin.almonaoffice.sa.almona.host/api/team`
+    );
     if (result.status == 200) {
       this.members = result.data.team;
     }

@@ -129,9 +129,11 @@ export default {
   methods: {
     async fetcharticles(page_url) {
       this.loading = true;
-      page_url = page_url || ` https://admin.almonaoffice.sa/api/articles`;
+      page_url =
+        page_url || `https://admin.almonaoffice.sa.almona.host/api/articles`;
 
-      page_url = page_url || ` https://admin.almonaoffice.sa/api/articles`;
+      page_url =
+        page_url || `https://admin.almonaoffice.sa.almona.host/api/articles`;
       this.loading = true;
 
       let result = await axios

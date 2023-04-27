@@ -349,7 +349,7 @@ export default {
   async mounted() {
     this.loading = true;
     let result = await axios.get(
-      ` https://admin.almonaoffice.sa/api/app/${this.id}`
+      `https://admin.almonaoffice.sa.almona.host/api/app/${this.id}`
     );
     if (result.status == 200) {
       this.app = result.data.app;

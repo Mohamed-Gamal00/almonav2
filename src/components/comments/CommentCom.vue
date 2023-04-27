@@ -61,7 +61,7 @@ export default {
   },
   async mounted() {
     let result = await axios
-      .get(` https://admin.almonaoffice.sa/api/app/${this.id}`)
+      .get(`https://admin.almonaoffice.sa.almona.host/api/app/${this.id}`)
       .catch(() => this.$router.push({ path: "/servererror" }));
     if (result.status == 200) {
       this.app = result.data.app;

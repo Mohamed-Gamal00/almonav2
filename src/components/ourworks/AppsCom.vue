@@ -146,7 +146,9 @@ export default {
   },
   async mounted() {
     this.loading = true;
-    let result = await axios.get(` https://admin.almonaoffice.sa/api/apps`);
+    let result = await axios.get(
+      `https://admin.almonaoffice.sa.almona.host/api/apps`
+    );
     if (result.status == 200) {
       this.cats = result.data.cats;
       this.products = result.data.apps;

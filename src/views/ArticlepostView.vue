@@ -84,14 +84,14 @@ export default {
   async mounted() {
     this.loading = true;
     let result = await axios
-      .get(` https://admin.almonaoffice.sa/api/article/${this.id}`)
+      .get(`https://admin.almonaoffice.sa.almona.host/api/article/${this.id}`)
       .catch(() => this.$router.push({ name: "servererror" }));
     if (result.status == 200) {
       this.article = result.data.article;
     }
     /* articles */
     let articles = await axios.get(
-      ` https://admin.almonaoffice.sa/api/articles`
+      `https://admin.almonaoffice.sa.almona.host/api/articles`
     );
     // .catch(() => this.$router.push({ name: "servererror" }));
     if (result.status == 200) {
